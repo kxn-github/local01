@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+  <link rel="stylesheet" type="text/css" href="test.css" >
+  <link rel="stylesheet" type="text/css" href="../style.css" >
+  <link rel="stylesheet" type="text/css" href="../bootstrap.paper.grey.dark.css" >
+  <link rel="stylesheet" type="text/css" href="../font-awesome.css" >
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css" >
+</head>
+<body>
+<nav class="navbar" data-role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#/">
+        <span>
+          <p ><img src="../images/ibmr.png">
+            <span class="benefitsfont"> Benefits in the Cloud</span>
+          </p>
+        </span>
+      </a>
+    </div>
+    <div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li ng-if="admin==true" style="padding-top:7px;">
+          <a href="#/app/import" data-toggle="tooltip" data-placement="bottom" title="Upload Input File" class="defultcolor">{{name}}
+            <i class="fa fa-address-card fa-3 fa-2x" style="color: #000002;padding-left: 5px;"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="content" class="welcome">
+  Welcome {{name}}
+</div>
+
+<div id="contentibm" class="contentthird">
+  <div id="top" class="twentyfivetop">
+     <span style="padding-left: 10%;">
+      Reference Number<br>
+      <div>
+        <span style="padding-left: 10%;" ;>Requested By
+       </span>
+
+          <span style="padding-left:62%">Type of Request</span>
+    <div class="btn-group">
+      <a type="button" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true"
+         aria-expanded="false">
+        Start Transport Allowance <span class="caret"></span>
+      </a>
+      <dl class="dropdown-menu">
+        <dt ><a href="#">Start Transport Allowance</a></dt>
+        <dt ><a href="#">Stop Transport Allowance</a></dt>
+      </dl>
+    </div>
+      </div>
+    </span><br>
+    <span style="padding-left: 10%;" ;>Date Created
+       </span>
+
+  </div>
+  <HR>
+
+  <div id="bottom" class="twentyfivebottom ">
+    <div class="col-lg-6 col-md-6 col-sm-6"><table class="table">
+      <thead>
+      <tr>
+        <th></th>
+        <th>Name</th>
+        <th>CNUM</th>
+        <th>Effective Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr>
+        <td><label><input name="Fruit" type="checkbox"> </label></td>
+        <td>Tanmay</td>
+        <td>Bangalore</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><label><input name="Fruit" type="checkbox"> </label></td>
+        <td>Sachin</td>
+        <td>Mumbai</td>
+        <td></td>
+      </tr>
+      </tbody>
+    </table>
+    </div>
+    <div class="container" style="padding-top: 12%">
+      <div id="fourbutton">
+      <div class="btn-group">
+        <button type="button" class="btn btn-primary">Save as Draft</button>
+      </div>
+      <div class="btn-group " style="padding-left:15%">
+        <button type="button" class="btn btn-primary">Save as Draft and close</button>
+      </div>
+      <div class="btn-group " style="padding-left:17%">
+        <button type="button" class="btn btn-primary">Submit</button>
+      </div>
+      <div class="btn-group " style="padding-left:20%" >
+        <button type="button" class="btn btn-primary">Cancel</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+<div class="row footer">
+  <div class="col-lg-12 col-md-12 col-sm-12 ">
+    <span class="benefitsfooter" >Benefits in the Cloud ® All Rights Reserved 2019</span>
+    <a  target="_blank" href="https://w3.ibm.com/w3publisher/w3-privacy-notice/details" class="defultcolor">Privacy&nbsp;</a>
+    <a href="http://www.ibm.com/legal/us/en/?lnk=flg-tous-usen"class="defultcolor">Terms & Conditions&nbsp;</a>
+    <a href="https://www.ibm.com/contact/us/en/?lnk=flg-cont-usen"class="defultcolor">Contact Us</a>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+

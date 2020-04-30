@@ -1,0 +1,121 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+  <link rel="stylesheet" type="text/css" href="../SG/test.css" >
+  <link rel="stylesheet" type="text/css" href="../style.css" >
+  <link rel="stylesheet" type="text/css" href="../checkpoint/styles.css" >
+  <link rel="stylesheet" type="text/css" href="../bootstrap.paper.grey.dark.css" >
+  <link rel="stylesheet" type="text/css" href="../font-awesome.css" >
+  <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.css" >
+</head>
+<!-- Page Content -->
+<div id="content" class="welcome welcomefont">
+  Per Diem Declaration Form
+</div>
+<div id="page-wrapper">
+  <div class="col-lg-12"></div>
+  <form name="newReqtransForm" class="form-horizontal" role="form" >
+    <table style="width: 99%; margin: 0px 400px 0 10px;">
+      <tr>
+        <td width="50%" style="padding: 10px;">
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;color:#143c6a;">Employee Unique ID</label>
+            <div class="col-sm-3">{{requester.reqNm}}</div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;padding-left: 10px;padding-right: 45px;color:#143c6a;">Employee Number</label>
+            <div class="col-sm-3">{{requester.firstname}} , {{requester.lastname}}</div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;padding-right: 52px;color:#143c6a;">Employee Name</label>
+            <div class="col-sm-3">{{requester.date}}</div>
+          </div>
+        </td>
+        <td width="50%" style="padding: 10px;">
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;color:#143c6a;">Period of Stay</label>
+            <div class="col-sm-3">{{requester.reqNm}}</div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;padding-left: 10px;padding-right: 45px;color:#143c6a;">Work Location</label>
+            <div class="col-sm-3">{{requester.firstname}} , {{requester.lastname}}</div>
+          </div>
+          <div class="form-group">
+            <label for="name" class="col-sm-3 control-label"
+                   style="line-height: 10px;padding-right: 52px;color:#143c6a;">Financial Year</label>
+            <div class="col-sm-3">{{requester.date}}</div>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div class="wait_block" block-ui="main">
+    </div>
+    <hr style="border: 1px #143c6a solid;width:100%">
+    <div class="physicalstay">My physical stay in India during the period {{}} to {{}} will be less than 60 days
+      <span style="padding-left: 500px">
+                  <td style="width:3%;"><input style="cursor: pointer;" type="checkbox"  name="checkbox" ng-model="x" ng-click="chk(item,x)">Yes</td>
+                 </span>
+      <span style="padding-left: 50px">
+                  <td style="width:3%;"><input style="cursor: pointer;" type="checkbox"  name="checkbox" ng-model="x" ng-click="chk(item,x)">No</td>
+                </span>
+    </div>
+    <div class="physicalstay">
+      Note:<br>
+      Please maintain adequate documentation in support of the above expenses. You will be required to produce the same if demanded by the India Revenue Authorities<br>
+      If IBM is challenged on non-deduction of tax on the basis of this declaration, you shall be responsible for the liability towards tax, interest, fee, penalty (as the case may be) imposed on IBM to the extent it relates to the per diem received by you during the period mentioned above.
+
+    </div>
+    <div>
+      test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>test<br>
+      test<br>test<br>test<br>test<br>test<br>
+      <span class="defultcolor" style="float:right">Signed by Employee {{First Name Last Name}} on {{DDMMYYYY HHMM}}</span>
+    </div>
+    <table  style="width: 98%; margin: 20px 20px 0px 10px;">
+      <tr>
+        <td style="width:20%">
+          <a href="#/userProfile"  rel="noopener noreferrer"><img src="../images/Home_Icon.png" ></a>
+          <!--<span style="margin:0 0 0 70%;width:10%">Signed by Employee {{First Name Last Name}} on {{DDMMYYYY HHMM}}</span>-->
+          <button style="padding:3px 1px;background-color: #143c6a;border: #143c6a;margin: 0 0 0 78%; width:10%" class="btn-lg btn-primary"  ng-class="{true:'disableStyle', false:'btn-primary'}[choseArr.length==0]" ng-disabled="newReqtransForm.$invalid || choseArr.length==0" ng-click="clickSubmit(newReqtransForm,choseArr)">Print</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div class="col-lg-12 col-md-12 col-sm-12 adm footer "style="background-color: #fdfffd">
+  <span class="benefitsfooter" >Benefits in the Cloud</span>
+  <a href="https://www.ibm.com/contact/us/en/?lnk=flg-cont-usen"class="defultcolor pull-right" style="text-decoration: none">Contact Us</a>
+  <a href="http://www.ibm.com/legal/us/en/?lnk=flg-tous-usen"class="defultcolor pull-right"style="text-decoration: none">Terms & Conditions&nbsp;&nbsp;&nbsp;&nbsp;</a>
+  <a  target="_blank" href="https://w3.ibm.com/w3publisher/w3-privacy-notice/details" class="defultcolor pull-right"style="text-decoration: none">Privacy&nbsp;&nbsp;&nbsp;</a>
+</div>
+
+<!--pop-up window-->
+<div class="fade modal" id="ApprovedNotice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" style="width:400px;margin-top:20%;">
+    <div class="modal-content alertcolor">
+      <div class="modal-header alertcolor" style="border-bottom:none">
+        <h5 class="modal-title" id="myModalLabel" style="color: white">
+          Action Required
+        </h5>
+      </div>
+      <div class="modal-content" style="border-radius:unset">
+        <div class="modal-body" style="color:#143c6a">
+          By clicking Submit,  I am stating that the information I have provided is accurate. I agree to provide additional information to support my declaration form if it is required by IBM &/or the India Revenue Authorities.
+
+        </div>
+        <div class="modal-footer" style="border-top:none">
+          <button  ng-click="sendconfirm()" class="btn btn-primary" style="background-color: #143c6a" data-dismiss="modal">Agree&nbsp;and&nbsp;Continue</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--ErrorMessage-->
+
+</html>

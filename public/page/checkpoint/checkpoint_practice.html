@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name=”viewport” content=”width=device-width, initial-scale=1″ />
+  <link rel="stylesheet" type="text/css" href="styles.css" >
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" >
+  <script type="text/javascript" src="practice.js"></script>
+  <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</head>
+
+<body>
+
+<div id="pagewrap">
+  <!----------------------------------导航区域---------------------------------->
+  <div id="page-topnav" class="header" style="width:100%" >
+
+    <div id="top" class="top " style=""> <!--pic-->
+      <div id="lef" style="height: 80px;width:500px; ">
+        <a href="//www.runoob.com">
+        <img src="../cp_images/checkpoint1.png" >
+        </a>
+        <div style="margin-left:220px;margin-top:-40px">
+          <!--<select onchange="window.location=this.value;"  name="select"  class="button" style="margin-left: 1px;background-color:white">-->
+            <select onchange="mbar(this)"  name="select"  class="button" style="margin-left: 1px;background-color:white">
+            <option selected >Goals</option>
+            <option value="http://www.baidu.com">Home</option>
+            <option value="http://www.runoob.com">Performance</option>
+          </select>
+          <i class="fa fa-angle-down" aria-hidden="true" style="margin-left: -54px"></i>
+        </div>
+      </div>
+
+      <div id="right"style="height: 80px;width:600px;float:right;margin-top:-80px">
+        <div class="search searchbar">
+          <form action="#" method="post">
+            <i class="fa fa-search isearch" aria-hidden="true"></i>
+            <input onclick="display('searchdropdown')" class="searchsize" type="text" name="condition" placeholder="Search for actions or people">
+            <div id="searchdropdown"  style="background-color: #fdfffd;display: none;height: 100px;border:2px solid #000002;z-index:3">
+              <span>You can search for:</span><br>
+                <span style="color: #2020bb">Employee Name</span>
+            </div>
+          </form>
+        </div>
+        <span class="todo"><!--todocheckicon-->
+      <i aria-hidden="false"onclick="display('todopop')" type="button" value="显示/隐藏"class="fa fa-check-circle-o" aria-hidden="true"></i>
+      </span>
+        <span class="info"> employeeinfo
+      </span>
+
+      </div>
+    </div>
+  </div><!--导航区域-->
+
+  <!------------------------------主体内容区域---------------------------------------->
+  <div id="page-main" class="content">
+    <div style="padding-left:20px;padding-top: 20px">
+      <div id="left" class="leftgoal">
+        <button class="button" style="background-color: #c2c2c2">Employeeicon</button>
+        <select onchange="mbar(this)"  name="select"  class="button" style="margin-left: 1px;background-color:white">
+          <option selected >2018 Goals</option>
+          <option value="http://www.baidu.com">2019 Goals</option>
+          <option value="http://www.runoob.com">2020 Goals</option>
+        </select>
+      </div>
+
+      <div class="addgoal">
+        <div id="todopop" class="todopop" style="z-index:2;display: none">
+          <span style="text-decoration: none;color: black;display: block;transition: 0.3s;">To-Do</span>
+        </div>
+        <div style="background-color: #ffd14b" class="dropdown">
+        <button  onclick="myFunction()" class="button" style=" border: 2px solid grey">Add Goal</button>
+          <div id="myDropdown" class="dropdown-content" style="">
+            <a href="#home">Create a new Goal</a>
+            <a href="#about">Copy From Previous Goal Plan</a>
+          </div>
+        </div>
+        <span class="dropdown" style="z-index: 1">
+        <i style="position: fixed;margin-top: 12px;margin-left: 39px;" class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        <button onclick="Function()"class="button" style="margin-left: 20px">Actions</button>
+          <div id="print" class="dropdown-content">
+            <a onclick="open_win()" href="#home">Print to HTML or PDF</a>
+          </div>
+          </span>
+        <button class="button" style="padding:8px 20px;margin-left: 20px">Display Options</button>
+        <a onclick="showOrHide()"class="fa fa-angle-up" aria-hidden="true"></a>
+      </div>
+    </div>
+
+    <div style="height: 20px;width:100%"><!--goal status-->
+      <span style="padding-left: 20px">
+        Goal Status:
+      </span>
+      <label> unlock</label>
+    </div>
+
+    <table class="lamp" style="padding-right:20px">
+      <tr>
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="background-color: white;width:100%">
+
+          <div id="">
+            <a id="faid" onclick="showHide('collps','faid')" class="fa fa-angle-down" aria-hidden="true"></a>
+            Introduction
+          </div>
+          <div  id="collps">
+           <div style="padding-top: 30px">
+             <img src="../cp_images/goals1.png" >
+           </div>
+          <span style="font-size:10px">
+            Need practice drafting your goals or using the tool? Check out the
+            <a href="">Drafting Goals Practice Guide</a>
+            and the <a href="">1-min tutorial.</a>
+          </span>
+          <span style="float:right;font-size:10px;padding-right: 770px">
+            <a href="https://w3.ibm.com/w3publisher/w3-privacy-notice/"target="_blank">IBM Internal Privacy Statement</a> effective as of May 2018.
+          </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <div style="height: 20px;width:100%"><!--goals-->
+      <i class="fa fa-plus-square-o" aria-hidden="true"></i>
+      <span style="">
+        Goals(Count:)
+            </span>
+    </div>
+    <!--<div style="height: 20px;width:100%">&lt;!&ndash;goals&ndash;&gt;-->
+      <!--<span style="font-size: 13px;padding-left: 5px;color: blue">-->
+        <!--Goals Description-->
+            <!--</span>-->
+    <!--</div>-->
+    <table class="lamp" style="padding-right: 20px;height:auto;">
+      <tr>
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td>Goals Description</td>
+        <td>Status</td>
+        <td>Dimension(s) related to this goal</td>
+        <td>Action</td>
+      </tr>
+
+
+      <tr style="background-color: white">
+      <th>
+        <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+      </th>
+      <td style="min-width:900px">
+        Goals content
+      </td>
+      <td style="">Compleated/Close  </td>
+      <td style="">Skills/Bussiness Results</td>
+      <td style="">
+        <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+      </td>
+    </tr>
+
+      <tr style="background-color: white">
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="">
+          <div style="font-size: 13px;padding-left: 30px">
+          <i id="goalsc" onclick="showHide('xx','goalsc')"  class="fa fa-angle-down" aria-hidden="true" style="font-size: 13px"></i>
+          Progress/Feedback
+          </div>
+        </td>
+        <td style=""> </td>
+        <td style=""></td>
+        <td style="">
+        </td>
+      </tr>
+      <tr style="background-color: white">
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="">
+          <div id="xx" style="font-size: 13px;padding-left: 45px">
+            goals content like : join developing team to coding the front-end part , using HTML/CSS/Bootstrap etc skills
+          </div>
+        </td>
+        <td style=""> </td>
+        <td style=""></td>
+        <td style="">
+        </td>
+      </tr>
+  <tr style="background-color: lightgrey;height:20px"> </tr>
+      <tr style="background-color: white">
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="">
+          Goals content
+        </td>
+        <td style="">Compleated/Close  </td>
+        <td style="">Skills/Bussiness Results</td>
+        <td style="">
+          <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+        </td>
+      </tr>
+
+      <tr style="background-color: white">
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="">
+          <div style="font-size: 13px;padding-left: 30px">
+            <a id="goalcontent" onclick="showHide('goalcont','goalcontent')"class="fa fa-angle-down" aria-hidden="true" style="font-size: 13px"></a>
+            Progress/Feedback
+          </div>
+        </td>
+        <td style=""> </td>
+        <td style=""></td>
+        <td style="">
+        </td>
+      </tr>
+      <tr style="background-color: white">
+        <th>
+          <!--<img src="/images/lamp.jpg" alt="Note" style="height:32px;width:32px">-->
+        </th>
+        <td style="">
+          <div id="goalcont" style="font-size: 13px;padding-left: 45px">
+            goals content like : join developing team to coding the front-end part , using HTML/CSS/Bootstrap etc skills
+          </div>
+        </td>
+        <td style=""> </td>
+        <td style=""></td>
+        <td style="">
+        </td>
+      </tr>
+      <tr style="background-color: lightgrey;height:20px"> </tr>
+    </table>
+  </div>
+
+  </div><!--主体区域-->
+
+</div>
+
+</body>
+</html>
